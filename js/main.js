@@ -1,3 +1,11 @@
+function DisplayIndex()
+{
+    document.querySelector(".code-container").style.display = "none";
+
+    document.querySelector(".site-container").style.display = "block";
+    document.querySelector(".navbar").style.display = "block";
+}
+
 document.addEventListener('DOMContentLoaded', () => 
 {
     codeContainer = document.getElementsByClassName("code-container")[0];
@@ -24,6 +32,11 @@ document.addEventListener('DOMContentLoaded', () =>
         codeString += htmlsource[i]
         codeContainer.innerHTML = "<pre id=\"preload-code\">" + codeString + ((i/10 % 2 == 0) ? "|" : "") + "</pre>";
         i +=1;
+        if (true)
+        {
+            DisplayIndex();
+            return;
+        }
 
         if (i >= linuxstring.length && !doneLinux)
         {
@@ -46,6 +59,10 @@ document.addEventListener('DOMContentLoaded', () =>
                 w3CodeColor(document.getElementsByClassName("code-container")[0]);
             }, ((doneLinux) ? 0 : 30));
             
+        }
+        else
+        {
+            DisplayIndex();
         }
     }
 
