@@ -1,3 +1,8 @@
+
+// Disable phone rotating
+//screen.lockOrientation("portrait-primary");
+
+
 function DisplayIndex()
 {
     document.querySelector(".code-container").style.display = "none";
