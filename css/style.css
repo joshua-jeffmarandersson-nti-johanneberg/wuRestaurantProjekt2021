@@ -7,11 +7,15 @@
 
 body
 {
-    background: #272822;
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
+    background: rgb(45, 45, 45);
+    color: white;
+    font: 1em/1.4 "lato";
     /* background: #272822 */
 }
+
 
 img {
     width: 100%;
@@ -64,18 +68,82 @@ input
 
 .background-img
 {
-    background-image: url("../img/polygonal.jpg");
+    /* The gradient accomplishes two goals: making it transition better into the navbar and transitioning it to the rest of the page below it. */
+    /* This is done by making a gradient from the colors of those elements and some more fine-tuning */
+    background-image: linear-gradient(rgba(230,45,24,0.2) 80%, rgba(45,45,45,1)), url("../img/polygonal.jpg");
     /* Set a specific height */
     height: 100vh;
     width: 100vw;
 
     /* Create the parallax scrolling effect */
-    background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     z-index: 1;
 }
+
+.button
+{
+    border: 2px solid white;
+    background-color: transparent;
+    color: white;
+    padding: 14px 28px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.button:hover
+{
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.index-grid-wrapper
+{
+    margin-top: 5vh;
+
+    display: grid;
+
+    grid-template-areas: 
+        "a1"
+        "a2"
+        "a3";
+
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: 1fr 0.2fr 1fr;
+    
+    gap: 2%;
+    padding: 2%;
+}
+
+
+
+#about-me
+{
+    grid-area: a1;
+}
+
+#img-container
+{
+    grid-area: a2;
+    width: 100%;
+    margin: 0;
+
+}
+
+#img-container img
+{
+    width: 100%;
+
+    height: auto;
+}
+
+#my-projects
+{
+    grid-area: a3;
+}
+
+
+
 
 label
 {
@@ -332,15 +400,6 @@ main .content
     width: 1px;
 }
 
-/* misc */
-body
-{
-    overflow-x: hidden;
-    background: #444;
-    color: white;
-    font: 1em/1.4 "lato";
-}
-
 main
 {
     background: #3498db;
@@ -373,8 +432,35 @@ article
 }
 
 
+
+
 @media only screen and (min-width: 48em)
 {
+    .index-grid-wrapper
+    {
+        grid-template-areas: 
+            "a1 a2"
+            "a3 a4";
+
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+    
+    }
+
+    #img-container
+    {
+        width: 100%;
+        height: auto;
+        margin-top: 40%;
+    }
+
+    #img-container img
+    {
+        
+        width: 100%;
+        height: auto;
+    }
+
     .burger-menu
     {
         display: none;
@@ -382,6 +468,7 @@ article
 
     .navbar
     {
+        background-image: linear-gradient(rgba(0,0,0,0), rgba(230,45,24,1));
         display: block;
         background-color: #d62956;
         width: 100%;
@@ -425,7 +512,7 @@ article
 
     .nav-links .current-tab
     {
-        background-color: #d62956;
+        background-image: linear-gradient(rgba(69,69,69,0.3), rgba(69,69,69,0.3));
     }
 
     #nav-logo
@@ -436,6 +523,7 @@ article
 
     #nav-logo img
     {
+        cursor: auto;
         width: auto;
         height: 100%;
         transform: translateX(-50%);
@@ -445,6 +533,19 @@ article
     {
         color: black;
         cursor: pointer;
+    }
+}
+
+@media only screen and (min-width: 80em)
+{
+    #img-container
+    {
+        margin-top: auto;
+    }
+
+    #img-container img
+    {
+        content: url("../img/Skill\ radar.png");
     }
 }
 
