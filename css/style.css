@@ -179,7 +179,7 @@ input
 {
     display: block;
     margin: 0;
-    width: 100%;
+    width: 100px;
     height: auto;
 }
 
@@ -187,8 +187,8 @@ input
 {
     padding-top: 1em;
     margin: 0;
-    width: 30%;
-    height: 20%;
+    width: 100px;
+    height: auto;
 }
 
 #contact-me
