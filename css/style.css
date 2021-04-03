@@ -1,7 +1,7 @@
 *
 {
     font-size: 100%;
-    font-family: Segoe UI;
+    font-family: "Segoe UI";
     box-sizing: border-box;
 }
 
@@ -106,23 +106,29 @@ input
     grid-template-areas: 
         "a1"
         "a2"
-        "a3";
+        "a3"
+        "a4";
 
     grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: 1fr 0.2fr 1fr;
+    grid-template-rows: 0.9fr 0.2fr 1fr 0.2fr;
     
-    gap: 2%;
+    row-gap: 10vh;
+    column-gap: 0.7vw;
     padding: 2%;
+    padding-bottom: 5vh;
 }
-
-
 
 #about-me
 {
     grid-area: a1;
 }
 
-#img-container
+#about-me h2
+{
+    font-size: 25pt;
+}
+
+#radar-container
 {
     grid-area: a2;
     width: 100%;
@@ -130,7 +136,7 @@ input
 
 }
 
-#img-container img
+#radar-container img
 {
     width: 100%;
 
@@ -142,7 +148,119 @@ input
     grid-area: a3;
 }
 
+#my-projects p
+{
+    display: inline;
+}
 
+#my-projects h2
+{
+    font-size: 25pt;
+    margin-top: 0;
+}
+
+#video-player-wrapper
+{
+    grid-area: a4;
+}
+
+#video-player-phone
+{
+    width: 100%;
+    height: auto;
+}
+
+#video-player-desktop
+{
+    display: none;
+}
+
+#github-logo
+{
+    display: block;
+    margin: 0;
+    width: 100%;
+    height: auto;
+}
+
+#github-logo img
+{
+    padding-top: 1em;
+    margin: 0;
+    width: 30%;
+    height: 20%;
+}
+
+#contact-me
+{
+    position: relative;
+    background: rgb(69, 69, 69);
+    width: 100%;
+}
+
+#contact-me h1
+{
+    padding-top: 20%;
+    text-align: center;
+    font-size: 30pt;
+    margin-bottom: 1%;
+}
+
+#contact-gradient-transition
+{
+    position: absolute;
+    width: 100%;
+    height: 75px;
+    top: 0;
+    background: linear-gradient(rgba(45,45,45, 1), rgba(69,69,69, 0));
+}
+
+.center
+{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.rainbow-text
+{
+    background: linear-gradient(270deg, #f20e0e, #fff900, #ff00f5, #00f1ff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-fill-color: transparent;
+    background-size: 600% 600%;
+    animation: AnimationName 12.5s ease infinite;
+}
+
+@keyframes AnimationName
+{
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+
+#header-underline-wrapper
+{
+    height: 4px;
+    margin-bottom: 3vh;
+}
+
+#header-underline
+{
+    width: 100px;
+    height: 4px;
+    background: white;
+}
+
+
+
+#triangle-transition
+{
+    display: none;
+    height: 75px;
+    width: 100%;
+}
 
 
 label
@@ -391,7 +509,7 @@ main .content
 .visuallyhidden
 {
     border: 0;
-    clip: rect(0 0 0 0);
+    clip: rect(0, 0, 0, 0);
     height: 1px;
     margin: -1px;
     overflow: hidden;
@@ -433,9 +551,37 @@ article
 
 
 
-
+/* Desktop, > 768 px */
 @media only screen and (min-width: 48em)
 {
+    #contact-gradient-transition
+    {
+        display: none;
+    }
+
+    #triangle-transition
+    {
+        display: block;
+    }
+
+    #contact-me h1
+    {
+        padding-top: 0;
+    }
+
+    #video-player-phone
+    {
+        height: 100%;
+        display: none;
+    }
+
+    #video-player-desktop
+    {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
     .index-grid-wrapper
     {
         grid-template-areas: 
@@ -443,18 +589,18 @@ article
             "a3 a4";
 
         grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(2, 1fr);
+        grid-template-rows: 0.7fr 0.7fr;
     
     }
 
-    #img-container
+    #radar-container
     {
         width: 100%;
         height: auto;
         margin-top: 40%;
     }
 
-    #img-container img
+    #radar-container img
     {
         
         width: 100%;
@@ -487,7 +633,7 @@ article
         align-items: center;
         height: 100%;
         margin: auto;
-        width: 30%;;
+        width: 100%;
     }
 
     .nav-links li
@@ -497,6 +643,7 @@ article
         padding-left: 2%;
         padding-right: 2%;
         height: 100%;
+        text-align: center;
     }
 
     .nav-links a
@@ -536,14 +683,27 @@ article
     }
 }
 
+@media only screen and (min-width: 60em)
+{
+    .nav-links
+    {
+        width: 80%;
+    }
+}
+
 @media only screen and (min-width: 80em)
 {
-    #img-container
+    .nav-links
     {
-        margin-top: auto;
+        width: 60%;
     }
 
-    #img-container img
+    #radar-container
+    {
+        margin-top: 0;
+    }
+
+    #radar-container img
     {
         content: url("../img/Skill\ radar.png");
     }
