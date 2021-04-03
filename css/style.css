@@ -84,9 +84,22 @@ input
 
 .about-me .background-img
 {
-    /* The gradient accomplishes two goals: making it transition better into the navbar and transitioning it to the rest of the page below it. */
-    /* This is done by making a gradient from the colors of those elements and some more fine-tuning */
     background-image: linear-gradient(rgba(0,0,0,0) 80%, rgba(45,45,45,1)), linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url("../img/polygonal\ about\ me.jpg");
+}
+
+.my-experience .background-img
+{
+    background-image: linear-gradient(rgba(0,0,0,0) 80%, rgba(45,45,45,1)), linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url("../img/polygonal\ my\ experience.jpg");
+}
+
+.my-projects .background-img
+{
+    background-image: linear-gradient(rgba(0,0,0,0) 80%, rgba(45,45,45,1)), linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url("../img/polygonal\ my\ projects.jpg");
+}
+
+.contact-me .background-img
+{
+    background-image: linear-gradient(rgba(0,0,0,0) 80%, rgba(45,45,45,1)), linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url("../img/polygonal\ contact\ me.jpg");
 }
 
 .button
@@ -227,6 +240,16 @@ input
     width: 100%;
     display: flex;
     justify-content: center;
+}
+
+#contact-me-text
+{
+    background: linear-gradient(270deg, #f20e0e, #fff900, #ff00f5, #00f1ff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-fill-color: transparent;
+    background-size: 300% 300%;
 }
 
 .rainbow-text
@@ -372,7 +395,8 @@ label:hover .burger
     left: 0;
     z-index: -1;
     width: 25em;
-    background: #d62956;
+    background: rgb(255,111,72);
+    background: linear-gradient(101deg, rgba(255,111,72,1) 0%, rgba(215,36,223,1) 100%);
     content: "";
     transform: skewX(15deg) translateX(-100%);
     transform-origin: bottom left;
@@ -382,9 +406,27 @@ label:hover .burger
 
 .about-me #menu::before
 {
-    background: rgb(80,40,80);
+    background: rgb(188,255,150);
+    background: linear-gradient(255deg, rgba(188,255,150,1) 0%, rgba(36,174,223,1) 100%);
 }
 
+.my-experience #menu::before
+{
+    background: rgb(217,137,51);
+    background: linear-gradient(45deg, rgba(217,137,51,1) 0%, rgba(215,31,137,1) 100%);
+}
+
+.my-projects #menu::before
+{
+    background: rgb(255,250,58);
+    background: linear-gradient(45deg, rgba(255,250,58,1) 19%, rgba(237,65,255,1) 100%);
+}
+
+.contact-me #menu::before
+{
+    background: rgb(107,255,214);
+    background: linear-gradient(103deg, rgba(107,255,214,1) 8%, rgba(242,118,255,1) 100%);
+}
 
 @media (min-width: 40em)
 {
@@ -652,6 +694,25 @@ article
         background-image: linear-gradient(207deg, rgba(2,0,36,1) 0%, rgba(92,47,93,1) 35%, rgba(47,93,92,1) 100%);;
         background-color: rgb(93,47,78);
     }
+    
+    .my-experience .navbar
+    {
+        background: rgb(15,1,24);
+        background: linear-gradient(162deg, rgba(15,1,24,1) 0%, rgba(235,49,12,1) 100%);
+    }
+
+    .my-projects .navbar
+    {
+        background: rgb(252,248,255);
+        background: linear-gradient(28deg, rgba(252,248,255,1) 0%, rgba(198,7,250,1) 100%);
+    }
+
+    .contact-me .navbar
+    {
+        background: rgb(102,0,255);
+        background: linear-gradient(28deg, rgba(231,255,86,1) 0%, rgba(102,0,255,1) 100%);        
+    }
+
 
     .nav-links
     {
@@ -689,13 +750,29 @@ article
 
     .nav-links .current-tab
     {
-        background-image: linear-gradient(rgba(69,69,69,0.3), rgba(69,69,69,0.3));
+        background-image: linear-gradient(rgba(69,69,69,0.5), rgba(69,69,69,0.5));
     }
 
     .about-me .nav-links .current-tab
     {
         background-image: linear-gradient(rgba(200,200,200,0.6), rgba(200,200,200,0.6));
     }
+
+    .my-experience .nav-links .current-tab
+    {
+        background-image: linear-gradient(rgba(200,200,200,0.6), rgba(200,200,200,0.6));
+    }
+
+    .my-projects .nav-links .current-tab
+    {
+        background-image: linear-gradient(rgba(200,200,200,0.6), rgba(200,200,200,0.6));
+    }
+
+    .contact-me .nav-links .current-tab
+    {
+        background-image: linear-gradient(rgba(200,200,200,0.6), rgba(200,200,200,0.6));
+    }
+    
 
     .nav-logo
     {
