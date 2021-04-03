@@ -82,6 +82,13 @@ input
     z-index: 1;
 }
 
+.about-me .background-img
+{
+    /* The gradient accomplishes two goals: making it transition better into the navbar and transitioning it to the rest of the page below it. */
+    /* This is done by making a gradient from the colors of those elements and some more fine-tuning */
+    background-image: linear-gradient(rgba(0,0,0,0) 80%, rgba(45,45,45,1)), linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url("../img/polygonal\ about\ me.jpg");
+}
+
 .button
 {
     border: 2px solid white;
@@ -97,7 +104,7 @@ input
     background: rgba(0, 0, 0, 0.2);
 }
 
-.index-grid-wrapper
+.grid-wrapper
 {
     margin-top: 5vh;
 
@@ -373,6 +380,11 @@ label:hover .burger
     transition: transform 0.5s cubic-bezier(0.19, 1, 0.22, 1);
 }
 
+.about-me #menu::before
+{
+    background: rgb(80,40,80);
+}
+
 
 @media (min-width: 40em)
 {
@@ -582,7 +594,7 @@ article
         display: block;
     }
 
-    .index-grid-wrapper
+    .grid-wrapper
     {
         grid-template-areas: 
             "a1 a2"
@@ -593,11 +605,23 @@ article
     
     }
 
+    .about-me .grid-wrapper
+    {
+        grid-template-areas: 
+            "a1 a2"
+            "a4 a3";
+    }
+
     #radar-container
     {
         width: 100%;
         height: auto;
-        margin-top: 40%;
+        margin-top: 20%;
+    }
+
+    .about-me #radar-container
+    {
+        margin-top: 50%;
     }
 
     #radar-container img
@@ -614,13 +638,19 @@ article
 
     .navbar
     {
-        background-image: linear-gradient(rgba(0,0,0,0), rgba(230,45,24,1));
+        background: linear-gradient(169deg, rgba(245,69,53,0.6446953781512605) 0%, rgba(172,82,3,0.6699054621848739) 58%, rgba(252,176,69,0.5242471988795518) 100%);
         display: block;
         background-color: #d62956;
         width: 100%;
         position: fixed;
         height: 8%;
         z-index: 10; /* Make sure that the navbar is always in front */
+    }
+
+    .about-me .navbar
+    {
+        background-image: linear-gradient(207deg, rgba(2,0,36,1) 0%, rgba(92,47,93,1) 35%, rgba(47,93,92,1) 100%);;
+        background-color: rgb(93,47,78);
     }
 
     .nav-links
@@ -662,7 +692,12 @@ article
         background-image: linear-gradient(rgba(69,69,69,0.3), rgba(69,69,69,0.3));
     }
 
-    #nav-logo
+    .about-me .nav-links .current-tab
+    {
+        background-image: linear-gradient(rgba(200,200,200,0.6), rgba(200,200,200,0.6));
+    }
+
+    .nav-logo
     {
         width: 10%;
         padding: 0 2rem;
@@ -673,7 +708,6 @@ article
         cursor: auto;
         width: auto;
         height: 100%;
-        transform: translateX(-50%);
     }
 
     .nav-links li:hover, .nav-links li:hover a
@@ -689,6 +723,16 @@ article
     {
         width: 80%;
     }
+
+    #radar-container
+    {
+        margin-top: 10%;
+    }
+
+    .about-me #radar-container
+    {
+        margin-top: 60%;
+    }
 }
 
 @media only screen and (min-width: 80em)
@@ -701,6 +745,11 @@ article
     #radar-container
     {
         margin-top: 0;
+    }
+
+    .about-me #radar-container
+    {
+        margin-top: 10%;
     }
 
     #radar-container img

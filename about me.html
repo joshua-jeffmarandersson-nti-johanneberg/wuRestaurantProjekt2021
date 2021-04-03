@@ -4,10 +4,22 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Programmer portfolio">
+        <meta name="keywords" content="HTML, CSS, JavaScript, design, problem solving, Portfolio">
+        <meta name="author" content="Joshua Andersson">
         <link rel="stylesheet" type="text/css" href="css/style.css">
-        <title>Foam</title>
+        <title>Joshua Andersson | Programmer</title>
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+        <!-- Favicon -->
+        <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
+        <link rel="manifest" href="favicons/site.webmanifest">
+        <link rel="mask-icon" href="favicons/safari-pinned-tab.svg" color="#5bbad5">
+        <meta name="msapplication-TileColor" content="#da532c">
+        <meta name="theme-color" content="#ffffff">
     </head>
     <body>
         <div class="code-container">
@@ -17,27 +29,154 @@
             </code>
         </div>
 
-        <div class="grid-container">
+        <div class="site-container about-me">
             <nav class="navbar">
                 <ul class="nav-links">
+                    <li id="nav-logo">
+                        <img src="img/poly%20logo%20bluegreen.png" alt="A logo in the shape of a gem.">
+                    </li>
                     <li>
                         <a href="index.html">
                             Home
                         </a>
                     </li>
                     <li class="current-tab">
-                        <a href="about me.html">
-                            About me
+                        <a href="about%20me.html">
+                            About Me
+                        </a>
+                    </li>
+                    <li>
+                        <a href="my%20experience.html">
+                            Experience
+                        </a>
+                    </li>
+                    <li>
+                        <a href="my%20projects.html">
+                            My projects
+                        </a>
+                    </li>
+                    <li>
+                        <a href="contact%20me.html">
+                            Contact
                         </a>
                     </li>
                 </ul>
             </nav>
-            <p style="font-size: 100px;">
-                DESPITO
-            </p>
+            <nav class="burger-menu">
+                <input type="checkbox" id="navcheck" role="button" title="menu">
+                <label for="navcheck" aria-hidden="true" title="menu">
+                    <span class="burger">
+                        <span class="bar">
+                            <span class="visuallyhidden">Menu</span>
+                        </span>
+                    </span>
+                </label>
+                <nav id="menu">
+                    <a href="index.html">Home</a>
+                    <a href="about%20me.html">About me</a>
+                    <a href="my%20experience.html">Experience</a>
+                    <a href="my%20projects.html">My projects</a>
+                    <a href="contact%20me.html">Contact me</a>
+                    <img src="img/poly%20logo%20bluegreen.png" alt="A logo in the shape of a gem.">
+                </nav>
+            </nav>
+            
+            <article class="introduction-text">
+                <h1>
+                    Joshua Andersson<br/>
+                    Who am I?
+                </h1>
+            </article>
+
+            <!-- Background image of polygons. Would like to use figure, but it adds unwanted css properties. -->
+            <div class="background-img">
+
+            </div>
+
+            <section class="grid-wrapper">
+                <article id="about-me">
+                    <h2>About Joshua</h2>
+                    <p>
+                        Hi! I'm Joshua Andersson, a Swedish high school student with a strong passion for programming.
+                        I first started programming at the age of 12, learning Python online. <br/><br/>
+                        Ever since, I've continued challenging myself with many different languages and technologies. I also love mathematics and problem solving.<br/><br/>
+                        The languages I'm comfortable with are:<br/>
+                        Python, C#, C++, C, Assembly, HTML, CSS, JavaScript, SQL, PHP, Java and Ruby.<br/>
+                        I've also used the OpenGL graphics api to write shaders and render 3D scenes.
+                        <br/>
+                    </p>
+
+                </article>
+
+                
+                <figure id="radar-container">
+                    <img src="img/Skill%20radar%20mobile.png" alt="An image describing my skills. 3/5 web development, 5/5 desktop development, 3/5 design, 4/5 problem solving, 5/5 programming, 3/5 machine learning.">
+                </figure>
+
+                <article id="my-projects">
+                    <h2>My other hobbies</h2>
+                    <p>
+                        Other than programming, enjoy playing video games. I really like playing games like Minecraft or Factorio, where I can
+                        challenge my problem solving abilities in a rewarding environment.<br/><br/>
+                        Despite a lot of my hobbies being in front of a computer, I also make sure to go to the gym every other day. Part of my motivation lies in
+                        all the scientifically proven benefits, but another important aspect for me is being able to rest my brain and only focus on a single task.<br/><br/>
+                        I also love the fact that I live next to a forest, which allows me to frequently take long walks, where I can think about problems and relax. 
+                    </p>
+
+                    
+                </article>
+
+                <!-- For mobile -->
+                <picture id="weights-image">
+                    <img src="img/lifting.png" alt="A person lifting a heavy weight.">
+                </picture>
+
+                </div>
+            </section>
+
+            <footer id="footer">
+                <section id="contact-me">
+                    <svg id="triangle-transition" preserveAspectRatio="none" viewBox="0 0 100 102" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 0 L50 100 L100 0 Z" fill="rgb(45, 45, 45)" stroke="rgb(45, 45, 45)"></path>
+                    </svg>
+                    <div id="contact-gradient-transition"></div>
+                    <h1>
+                        CONTACT
+                    </h1>
+    
+                    <div class="center" id="header-underline-wrapper">
+                        <div id="header-underline"></div>
+                    </div>
+    
+                    <div class="center">
+                        <p>
+                            Do you have a question or want to work with me?
+                        </p>
+                    </div>
+    
+                    <!-- Using inline css because it's only one property -->
+                    <form action="contant%20me.html" method="get" class="center" style="padding-bottom: 4vh;">
+                        <button class="button">
+                            Contact Me!
+                        </button>
+                    </form>
+                    
+                </section>
+                <div class="center">
+                    <a href="https://github.com/Matistjati" id="github-logo">
+                        <img src="img/github%20logo.png" alt="The github logo">
+                    </a>
+                </div>
+
+                
+                <div class="center">
+                    <p>
+                        Joshua Andersson, 2021
+                    </p>
+                </div>
+            </footer>
         </div>
 
-        
         <script src="js/w3codecolor.js"></script>
         <script src="js/main.js"></script>
     </body>

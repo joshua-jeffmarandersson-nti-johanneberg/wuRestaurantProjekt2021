@@ -74,31 +74,3 @@ document.addEventListener('DOMContentLoaded', () =>
     RenderCode()
 
 });
-
-var ONLYONETIME_EXECUTE = null;
-window.addEventListener('load', function(){ // on page load
-    let player = document.querySelector("#bad-apple-player")
-    console.log(player)
-    player.play()
-      document.body.addEventListener('touchstart', function(e)
-      {
-    
-    if (ONLYONETIME_EXECUTE == null) {   
-
-
-        let player = document.querySelector("#bad-apple-player")
-        console.log(player)
-        player.play();
-
-        //if you want to prepare more than one video/audios use this trick :             
-          // now video2 is buffering and you can play it programmability later 
-          // My personal testing was maximum 6 video/audio for android 
-          // and maybe 3 max for iOS using single click or touch.
-          // Every next click also can prepare more audios/videos.
-
-        ONLYONETIME_EXECUTE = 0;
-    }
-
-  }, false)
- 
-}, false)
