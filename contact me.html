@@ -9,8 +9,6 @@
         <meta name="author" content="Joshua Andersson">
         <link rel="stylesheet" type="text/css" href="css/style.css">
         <title>Joshua Andersson | Programmer</title>
-        <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 
         <!-- Favicon -->
         <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon.png">
@@ -22,14 +20,7 @@
         <meta name="theme-color" content="#ffffff">
     </head>
     <body>
-        <div class="code-container">
-            <!--Where the preload code will go-->
-            <code id="preload-code">
-
-            </code>
-        </div>
-
-        <div class="site-container contact-me">
+        <div class="contact-me">
             <nav class="navbar">
                 <ul class="nav-links">
                     <li id="nav-logo">
@@ -123,10 +114,7 @@
                     </div>
                 </div>
 
-                <!-- I really didn't want to use action= to call the javascript function here. However, if I do not specify an action, the page will reload when clicking the button
-                The alternative would be to include action="javascript:void(0);".
-                However, it feels stupid to do this and adding an onclick in the js file instead of directly calling it here -->
-                <form class="contact-form" action="javascript:SubmitForm()">
+                <form class="contact-form">
                     <h2>CONTACT ME</h2>
                     <p type="Name:"><input id="name-input"></input></p>
                     <p type="Subject"><input id="subject-input"></input></p>

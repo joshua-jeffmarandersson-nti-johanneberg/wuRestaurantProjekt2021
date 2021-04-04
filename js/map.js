@@ -2,6 +2,7 @@ function InitMap()
 {
     let lat = 57.871964;
     let long = 11.966421;
+    
     const map = new google.maps.Map(
         document.getElementById("map"),
         {

@@ -9,8 +9,6 @@
         <meta name="author" content="Joshua Andersson">
         <link rel="stylesheet" type="text/css" href="css/style.css">
         <title>Joshua Andersson | Programmer</title>
-        <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 
         <!-- Favicon -->
         <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon.png">
@@ -22,176 +20,167 @@
         <meta name="theme-color" content="#ffffff">
     </head>
     <body>
-        <div class="code-container">
-            <!--Where the preload code will go-->
-            <code id="preload-code">
+        <nav class="navbar">
+            <ul class="nav-links">
+                <li id="nav-logo">
+                    <a href="index.html">
+                        <img src="img/Poly%20logo%20home.png" alt="A logo in the shape of a gem.">
+                    </a>
+                </li>
+                <li class="current-tab">
+                    <a href="index.html">
+                        Home
+                    </a>
+                </li>
+                <li>
+                    <a href="about%20me.html">
+                        About Me
+                    </a>
+                </li>
+                <li>
+                    <a href="my%20experience.html">
+                        Experience
+                    </a>
+                </li>
+                <li>
+                    <a href="my%20projects.html">
+                        My projects
+                    </a>
+                </li>
+                <li>
+                    <a href="contact%20me.html">
+                        Contact
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <nav class="burger-menu">
+            <input type="checkbox" id="navcheck" role="button" title="menu">
+            <label for="navcheck" aria-hidden="true" title="menu">
+                <span class="burger">
+                    <span class="bar">
+                        <span class="visuallyhidden">Menu</span>
+                    </span>
+                </span>
+            </label>
+            <nav id="menu">
+                <a href="index.html">Home</a>
+                <a href="about%20me.html">About me</a>
+                <a href="my%20experience.html">Experience</a>
+                <a href="my%20projects.html">My projects</a>
+                <a href="contact%20me.html">Contact me</a>
+                <img src="img/Poly%20logo%20home.png" alt="A logo in the shape of a gem.">
+            </nav>
+        </nav>
+        
+        <article class="introduction-text">
+            <h1>
+                Joshua Andersson<br/>
+                Programmer
+            </h1>
+        </article>
 
-            </code>
+        <!-- Background image of polygons. Would like to use figure, but it adds unwanted css properties. -->
+        <div class="background-img">
+
         </div>
 
-        <div class="site-container">
-            <nav class="navbar">
-                <ul class="nav-links">
-                    <li id="nav-logo">
-                        <a href="index.html">
-                            <img src="img/Poly%20logo%20home.png" alt="A logo in the shape of a gem.">
-                        </a>
-                    </li>
-                    <li class="current-tab">
-                        <a href="index.html">
-                            Home
-                        </a>
-                    </li>
-                    <li>
-                        <a href="about%20me.html">
-                            About Me
-                        </a>
-                    </li>
-                    <li>
-                        <a href="my%20experience.html">
-                            Experience
-                        </a>
-                    </li>
-                    <li>
-                        <a href="my%20projects.html">
-                            My projects
-                        </a>
-                    </li>
-                    <li>
-                        <a href="contact%20me.html">
-                            Contact
-                        </a>
-                    </li>
-                </ul>
-            </nav>
-            <nav class="burger-menu">
-                <input type="checkbox" id="navcheck" role="button" title="menu">
-                <label for="navcheck" aria-hidden="true" title="menu">
-                    <span class="burger">
-                        <span class="bar">
-                            <span class="visuallyhidden">Menu</span>
-                        </span>
-                    </span>
-                </label>
-                <nav id="menu">
-                    <a href="index.html">Home</a>
-                    <a href="about%20me.html">About me</a>
-                    <a href="my%20experience.html">Experience</a>
-                    <a href="my%20projects.html">My projects</a>
-                    <a href="contact%20me.html">Contact me</a>
-                    <img src="img/Poly%20logo%20home.png" alt="A logo in the shape of a gem.">
-                </nav>
-            </nav>
-            
-            <article class="introduction-text">
-                <h1>
-                    Joshua Andersson<br/>
-                    Programmer
-                </h1>
+        <section class="grid-wrapper">
+            <article id="about-me">
+                <h2>About Joshua</h2>
+                <p>
+                    Hi! I'm Joshua Andersson, a swedish highschool student with a strong passion for programming. <br/>
+                    Even though I feel confident in my abilities today, I look forward to learning even more! <br/>
+                    <br/>
+                </p>
+                <form action="about%20me.html" method="get">
+                    <button class="button">
+                        Read more
+                    </button>
+                </form>
             </article>
 
-            <!-- Background image of polygons. Would like to use figure, but it adds unwanted css properties. -->
-            <div class="background-img">
+            
+            <figure id="radar-container">
+                <img src="img/Skill%20radar%20mobile.jpg" alt="An image describing my skills. 3/5 web development, 5/5 desktop development, 3/5 design, 4/5 problem solving, 5/5 programming, 3/5 machine learning.">
+            </figure>
 
-            </div>
+            <article id="my-projects">
+                <h2>My Projects</h2>
+                <p>
+                    What makes programming
+                </p>
+                <span class="rainbow-text">
+                    magical
+                </span>
+                <p>
+                    to me is that you can use it for (almost) anything.<br/>
+                    I always try to find new ways to enrichen my life using it, which has led to me making many projects over the years.<br/>
+                    <br/>
+                </p>
 
-            <section class="grid-wrapper">
-                <article id="about-me">
-                    <h2>About Joshua</h2>
-                    <p>
-                        Hi! I'm Joshua Andersson, a swedish highschool student with a strong passion for programming. <br/>
-                        Even though I feel confident in my abilities today, I look forward to learning even more! <br/>
-                        <br/>
-                    </p>
-                    <form action="about%20me.html" method="get">
-                        <button class="button">
-                            Read more
-                        </button>
-                    </form>
-                </article>
-
+                <form action="my%20projects.html" method="get">
+                    <button class="button">
+                        Read more
+                    </button>
+                </form>
                 
-                <figure id="radar-container">
-                    <img src="img/Skill%20radar%20mobile.png" alt="An image describing my skills. 3/5 web development, 5/5 desktop development, 3/5 design, 4/5 problem solving, 5/5 programming, 3/5 machine learning.">
-                </figure>
+            </article>
 
-                <article id="my-projects">
-                    <h2>My Projects</h2>
-                    <p>
-                        What makes programming
-                    </p>
-                    <span class="rainbow-text">
-                        magical
-                    </span>
-                    <p>
-                        to me is that you can use it for (almost) anything.<br/>
-                        I always try to find new ways to enrichen my life using it, which has led to me making many projects over the years.<br/>
-                        <br/>
-                    </p>
+            <!-- For mobile -->
+            <div id="video-player-wrapper">
+                <img src="img/bad%20apple%20ascii.gif" id="video-player-phone" alt="A gif of a woman sheathing a sword, rendered using only ascii characters.">
 
-                    <form action="my%20projects.html" method="get">
-                        <button class="button">
-                            Read more
-                        </button>
-                    </form>
-                    
-                </article>
+                <!-- For desktop. Sadly, alt does not exist for video. -->
+                <video playsinline autoplay loop muted id="video-player-desktop">
+                    <source src="img/bad%20apple%20ascii.webm" type="video/webm">
+                    <source src="img/bad%20apple%20ascii.gif" type="video/gif">
+                </video>
+            </div>
+        </section>
 
-                <!-- For mobile -->
-                <div id="video-player-wrapper">
-                    <img src="img/bad%20apple%20ascii.gif" id="video-player-phone" alt="A gif of a woman sheathing a sword, rendered using only ascii characters.">
 
-                    <!-- For desktop. Sadly, alt does not exist for video. -->
-                    <video playsinline autoplay loop muted id="video-player-desktop">
-                        <source src="img/bad%20apple%20ascii.webm" type="video/webm">
-                        <source src="img/bad%20apple%20ascii.gif" type="video/gif">
-                    </video>
+        <footer id="footer">
+            <section id="contact-me">
+                <svg id="triangle-transition" preserveAspectRatio="none" viewBox="0 0 100 102" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 0 L50 100 L100 0 Z" fill="rgb(45, 45, 45)" stroke="rgb(45, 45, 45)"></path>
+                </svg>
+                <div id="contact-gradient-transition"></div>
+                <h1>
+                    CONTACT
+                </h1>
+
+                <div class="center" id="header-underline-wrapper">
+                    <div id="header-underline"></div>
                 </div>
+
+                <div class="center">
+                    <p>
+                        Do you have a question or want to work with me?
+                    </p>
+                </div>
+
+                <form action="contact%20me.html" method="get" class="center">
+                    <button class="button">
+                        Contact Me!
+                    </button>
+                </form>
+                
             </section>
 
+            <div class="center">
+                <a href="https://github.com/Matistjati" id="github-logo">
+                    <img src="img/github%20logo.png" alt="The github logo">
+                </a>
+            </div>
 
-            <footer id="footer">
-                <section id="contact-me">
-                    <svg id="triangle-transition" preserveAspectRatio="none" viewBox="0 0 100 102" version="1.1" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M0 0 L50 100 L100 0 Z" fill="rgb(45, 45, 45)" stroke="rgb(45, 45, 45)"></path>
-                    </svg>
-                    <div id="contact-gradient-transition"></div>
-                    <h1>
-                        CONTACT
-                    </h1>
-    
-                    <div class="center" id="header-underline-wrapper">
-                        <div id="header-underline"></div>
-                    </div>
-    
-                    <div class="center">
-                        <p>
-                            Do you have a question or want to work with me?
-                        </p>
-                    </div>
-    
-                    <form action="contact%20me.html" method="get" class="center">
-                        <button class="button">
-                            Contact Me!
-                        </button>
-                    </form>
-                    
-                </section>
-
-                <div class="center">
-                    <a href="https://github.com/Matistjati" id="github-logo">
-                        <img src="img/github%20logo.png" alt="The github logo">
-                    </a>
-                </div>
-
-                
-                <div class="center">
-                    <p>
-                        Joshua Andersson, 2021
-                    </p>
-                </div>
-            </footer>
-        </div>
+            
+            <div class="center">
+                <p>
+                    Joshua Andersson, 2021
+                </p>
+            </div>
+        </footer>
 
         <script src="js/w3codecolor.js"></script>
         <script src="js/main.js"></script>

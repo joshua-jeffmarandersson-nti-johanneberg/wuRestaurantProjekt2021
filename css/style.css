@@ -60,26 +60,6 @@ img
     object-fit: cover;
 }
 
-#preload-code
-{
-    font-family: 'Roboto', arial, serif;
-    max-width: 100vw;
-    overflow: hidden;
-}
-
-
-.code-container
-{
-    color:#F8F8F2;
-    font-size: 0.7rem;
-    overflow-wrap: break-word;
-}
-
-.site-container
-{
-    display: none;
-}
-
 .introduction-text
 {
     position: absolute;
@@ -418,9 +398,6 @@ img
 {
     margin: 0 5px 0 15px;
 }
-  
-
-  
 
 .center
 {
@@ -465,6 +442,7 @@ img
     grid-template-rows: repeat(auto-fit, minmax(100px, 1fr));
     grid-template-columns: 1fr;
 }
+
 
 
 .my-projects #about-my-projects a:visited
@@ -540,11 +518,25 @@ img
     width: 100%;
     padding: 2em;
     
-    background: linear-gradient(276deg, rgba(115,255,216,1) 0%, rgba(242,118,255,1) 100%);
+    background: linear-gradient(270deg, rgba(107,221,230,1)  0%, rgba(242,118,255,1) 100%);
     color: #fff;
     border-radius: 1em;
 }
 
+.my-projects #timeline-stack #timeline ul :nth-child(2) .container
+{    
+    background: linear-gradient(90deg, rgba(107,221,230,1)  0%, rgba(242,118,255,1) 100%);
+}
+
+.my-projects #timeline-stack #timeline ul :nth-child(3) .container
+{    
+    background: linear-gradient(270deg, rgba(107,221,230,1)  0%, rgba(242,118,255,1) 100%);
+}
+
+.my-projects #timeline-stack #timeline ul :nth-child(4) .container
+{    
+    background: linear-gradient(90deg, rgba(107,221,230,1)  0%, rgba(242,118,255,1) 100%);
+}
 
 .my-projects #timeline-stack #timeline ul
 {
@@ -1381,26 +1373,10 @@ article
 
     #radar-container img
     {
-        content: url("../img/Skill\ radar.png");
+        content: url("../img/Skill\ radar.jpg");
     }
 }
 
-
-@media only screen and (min-width: 500px)
-{
-    .code-container
-    {
-        font-size: 1rem;
-    }
-}
-
-@media only screen and (min-width: 900px)
-{
-    .code-container
-    {
-        font-size: 1.5rem;
-    }
-}
 
 @media only screen and (aspect-ratio: 280/653)
 {
