@@ -33,7 +33,9 @@
             <nav class="navbar">
                 <ul class="nav-links">
                     <li id="nav-logo">
-                        <img src="img/poly%20logo%20purple.png" alt="A logo in the shape of a gem.">
+                        <a href="index.html">
+                            <img src="img/poly%20logo%20purple.png" alt="A logo in the shape of a gem.">
+                        </a>
                     </li>
                     <li>
                         <a href="index.html">
@@ -94,44 +96,158 @@
             </div>
 
             <section class="grid-wrapper">
-                <article id="about-me">
-                    <h2>About Joshua</h2>
+                <article id="about-my-projects">
+                    <h2>My projects</h2>
                     <p>
-                        Hi! I'm Joshua Andersson, a Swedish high school student with a strong passion for programming.
-                        I first started programming at the age of 12, learning Python online. <br/><br/>
-                        Ever since, I've continued challenging myself with many different languages and technologies. I also love mathematics and problem solving.<br/><br/>
-                        The languages I'm comfortable with are:<br/>
-                        Python, C#, C++, C, Assembly, HTML, CSS, JavaScript, SQL, PHP, Java and Ruby.<br/>
-                        I've also used the OpenGL graphics api to write shaders and render 3D scenes.
-                        <br/>
+                        Over the years I've made countless projects, some ending up more finished than others. If you want a look into what I've done, you can see some of the highlights in the timeline below.<br/>
+                        However, these are only a fraction of what I've done and I encourage you to check out my <a href="https://github.com/Matistjati" target="_blank">github</a> if you want to see more.
+                        
                     </p>
 
                 </article>
 
+                <section id="project-timeline" class="center-items">
+                    <header><h1 class="gradient-text">My projects</h1></header>
+                    <section id="timeline">
+                        <ul>
+                            <li>
+                                <section class="container overlay-gradient">
+                                    <header><h3 class="gradient-text">2018</h3></header>
+                                    <article class="card-grid">
+                                        <h1>
+                                            <a href="https://github.com/Matistjati/Simple-console-game" target="_blank">
+                                                Console RPG
+                                            </a>
+                                        </h1>
+                                        <img src="img/cmdgame.png" alt="An RPG interface in a command prompt.">
+                                        <p>One of my first major projects was a simple rpg for the cmd using python. Although I didn't finish it, it taught me alot about rendering.</p>
+                                    </article>
+                                </section>
+                            </li>
+                            <li>
+                                <section class="container overlay-gradient">
+                                    <header><h3 class="gradient-text">2019- 2021</h3></header>
+                                    <article class="card-grid">
+                                        <h1>
+                                            <a href="https://github.com/Matistjati/Mandelbuld-renderer" target="_blank">
+                                                OpenGL fractals
+                                            </a>
+                                            
+                                        </h1>
+                                        <img src="img/fractal.jpg" alt="A colorful fractal, an abstract beautiful shape">
+                                        <p>Rendering fractals using C++ OpenGL shaders has taught me alot about computer graphics and math- from probabilities to ray tracing and rasterization. My most ambitious project by far.</p>
+                                    </article>
+                                </section>
+                            </li>
+                            <li>
+                                <section class="container overlay-gradient">
+                                    <header><h3 class="gradient-text">2020</h3></header>
+                                    <article class="card-grid">
+                                        <h1>
+                                            <a href="https://github.com/Matistjati/Anime-character-identifier" target="_blank">
+                                                Machine learning
+                                            </a>
+                                        </h1>
+                                        <img src="img/megumin ai.jpg" alt="A computer identifying the face and name of an anime character.">
+                                        <p>I took a dive into machine learning. It all begun with me making deepfakes using the first-order-model ai. After that, I tried making various projects, including one which would identify anime characters from an image with an average 98% accuracy.</p>
+                                    </article>
+                                </section>
+                            </li>
+                            <li>
+                                <section class="container overlay-gradient">
+                                    <header><h3 class="gradient-text">2021</h3></header>
+                                    <article class="card-grid">
+                                        <h1>
+                                            <a href="https://github.com/Matistjati/Console-mp4" target="_blank">
+                                                Cmd videos
+                                            </a>
+                                        </h1>
+                                        <div id="video-player-wrapper">
+                                            <img src="img/bad%20apple%20ascii.gif" id="video-player-phone" alt="A gif of a woman sheathing a sword, rendered using only ascii characters.">
+                        
+                                            <!-- For desktop. Sadly, alt does not exist for video. -->
+                                            <video playsinline autoplay loop muted id="video-player-desktop">
+                                                <source src="img/bad%20apple%20ascii.webm" type="video/webm">
+                                                <source src="img/bad%20apple%20ascii.gif" type="video/gif">
+                                            </video>
+                                        </div>
+                                        <p>In a throwback to the past, I decided to make another project in the command prompt. Because of my improvements in programming, I was able to play videos seamlessly using only ascii characters.</p>
+                                    </article>
+                                </section>
+                            </li>
+                        </ul>
+                    </section>
+                </section>
                 
-                <figure id="radar-container">
-                    <img src="img/Skill%20radar%20mobile.png" alt="An image describing my skills. 3/5 web development, 5/5 desktop development, 3/5 design, 4/5 problem solving, 5/5 programming, 3/5 machine learning.">
-                </figure>
 
-                <article id="my-projects">
-                    <h2>My other hobbies</h2>
-                    <p>
-                        Other than programming, enjoy playing video games. I really like playing games like Minecraft or Factorio, where I can
-                        challenge my problem solving abilities in a rewarding environment.<br/><br/>
-                        Despite a lot of my hobbies being in front of a computer, I also make sure to go to the gym every other day. Part of my motivation lies in
-                        all the scientifically proven benefits, but another important aspect for me is being able to rest my brain and only focus on a single task.<br/><br/>
-                        I also love the fact that I live next to a forest, which allows me to frequently take long walks, where I can think about problems and relax. 
-                    </p>
-
-                    
-                </article>
-
-                <!-- For mobile -->
-                <picture id="weights-image">
-                    <img src="img/lifting.png" alt="A person lifting a heavy weight.">
-                </picture>
-
-                </div>
+                <section id="timeline-stack" class="center-items">
+                    <section id="timeline">
+                        <ul id="timeline-grid">
+                            <li>
+                                <section class="container">
+                                    <article class="card-grid">
+                                        <h1>
+                                            <a href="https://github.com/Matistjati/Simple-console-game" target="_blank">
+                                                Console RPG
+                                            </a>
+                                        </h1>
+                                        <img src="img/cmdgame.png" alt="An RPG interface in a command prompt.">
+                                        <p>One of my first major projects was a simple rpg for the cmd using python. Although I didn't finish it, it taught me alot about rendering.</p>
+                                    </article>
+                                </section>
+                            </li>
+                            <li>
+                                <section class="container">
+                                    <article class="card-grid">
+                                        <h1>
+                                            <a href="https://github.com/Matistjati/Mandelbuld-renderer" target="_blank">
+                                                OpenGL fractals
+                                            </a>
+                                            
+                                        </h1>
+                                        <img src="img/fractal.jpg" alt="A colorful fractal, an abstract beautiful shape">
+                                        <p>Rendering fractals using C++ OpenGL shaders has taught me alot about computer graphics and math- from probabilities to ray tracing and rasterization. My most ambitious project by far.</p>
+                                    </article>
+                                </section>
+                            </li>
+                            <li>
+                                <section class="container">
+                                    <article class="card-grid">
+                                        <h1>
+                                            <a href="https://github.com/Matistjati/Anime-character-identifier" target="_blank">
+                                                Machine learning
+                                            </a>
+                                        </h1>
+                                        <img src="img/megumin ai.jpg" alt="A computer identifying the face and name of an anime character.">
+                                        <p>I took a dive into machine learning. It all begun with me making deepfakes using the first-order-model ai. After that, I tried making various projects, including one which would identify anime characters from an image with an average 98% accuracy.</p>
+                                    </article>
+                                </section>
+                            </li>
+                            <li>
+                                <section class="container">
+                                    <article class="card-grid">
+                                        <h1>
+                                            <a href="https://github.com/Matistjati/Console-mp4" target="_blank">
+                                                Cmd videos
+                                            </a>
+                                        </h1>
+                                        <div id="video-player-wrapper">
+                                            <img src="img/bad%20apple%20ascii.gif" id="video-player-phone" alt="A gif of a woman sheathing a sword, rendered using only ascii characters.">
+                        
+                                            <!-- For desktop. Sadly, alt does not exist for video. -->
+                                            <video playsinline autoplay loop muted id="video-player-desktop">
+                                                <source src="img/bad%20apple%20ascii.webm" type="video/webm">
+                                                <source src="img/bad%20apple%20ascii.gif" type="video/gif">
+                                            </video>
+                                        </div>
+                                        <p>In a throwback to the past, I decided to make another project in the command prompt. Because of my improvements in programming, I was able to play videos seamlessly using only ascii characters.</p>
+                                    </article>
+                                </section>
+                            </li>
+                        </ul>
+                    </section>
+                </section>
+                
             </section>
 
             <footer id="footer">
