@@ -4,8 +4,8 @@ function SubmitForm()
     let subject = document.querySelector('#subject-input').value;
     let body = document.querySelector('#message-input').value;
 
-    var link = "mailto:matistjati@outlook.com"
-             + "&subject=" + encodeURIComponent(subject)
+    var link = "mailto:matistjati@outlook.com?"
+             + "subject=" + encodeURIComponent(subject)
              + "&body=" + encodeURIComponent("From: " + name + ".\n" + body);
     ;
 
