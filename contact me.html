@@ -93,44 +93,47 @@
             </div>
 
             <section class="grid-wrapper">
-                <article id="about-me">
-                    <h2>About Joshua</h2>
+                <article id="contact-info">
+                    <h1 id="contact-me-text">
+                        Contact me
+                    </h1>
                     <p>
-                        Hi! I'm Joshua Andersson, a Swedish high school student with a strong passion for programming.
-                        I first started programming at the age of 12, learning Python online. <br/><br/>
-                        Ever since, I've continued challenging myself with many different languages and technologies. I also love mathematics and problem solving.<br/><br/>
-                        The languages I'm comfortable with are:<br/>
-                        Python, C#, C++, C, Assembly, HTML, CSS, JavaScript, SQL, PHP, Java and Ruby.<br/>
-                        I've also used the OpenGL graphics api to write shaders and render 3D scenes.
-                        <br/>
+                        I'm interested in freelance work remotely, be it large or small.<br/>
+                        However, if you have any other question, don't hesitate to contact me with the form below!
                     </p>
-
                 </article>
 
-                
-                <figure id="radar-container">
-                    <img src="img/Skill%20radar%20mobile.png" alt="An image describing my skills. 3/5 web development, 5/5 desktop development, 3/5 design, 4/5 problem solving, 5/5 programming, 3/5 machine learning.">
-                </figure>
+                <div id="map-container">
+                    <div id="map">
 
-                <article id="my-projects">
-                    <h2>My other hobbies</h2>
-                    <p>
-                        Other than programming, enjoy playing video games. I really like playing games like Minecraft or Factorio, where I can
-                        challenge my problem solving abilities in a rewarding environment.<br/><br/>
-                        Despite a lot of my hobbies being in front of a computer, I also make sure to go to the gym every other day. Part of my motivation lies in
-                        all the scientifically proven benefits, but another important aspect for me is being able to rest my brain and only focus on a single task.<br/><br/>
-                        I also love the fact that I live next to a forest, which allows me to frequently take long walks, where I can think about problems and relax. 
-                    </p>
-
-                    
-                </article>
-
-                <!-- For mobile -->
-                <picture id="weights-image">
-                    <img src="img/lifting.png" alt="A person lifting a heavy weight.">
-                </picture>
-
+                    </div>
+                    <div id="map-overlay">
+                        <p>
+                            Joshua Andersson,<br/>
+                            Sweden, Kungälv<br/><br/>
+                        </p>
+                        <span>@</span>
+                        <p style="display: inline; margin-left: 0;">
+                            : Matistjati@outlook.com
+                        </p>
+                            
+                        </p>
+                    </div>
                 </div>
+
+                <!-- I really didn't want to use action= to call the javascript function here. However, if I do not specify an action, the page will reload when clicking the button
+                The alternative would be to include action="javascript:void(0);".
+                However, it feels stupid to do this and adding an onclick in the js file instead of directly calling it here -->
+                <form class="contact-form" action="javascript:SubmitForm()">
+                    <h2>CONTACT ME</h2>
+                    <p type="Name:"><input id="name-input"></input></p>
+                    <p type="Subject"><input id="subject-input"></input></p>
+                    <p type="Message:"><input id="message-input"></input></p>
+                    <button class="button">
+                        Send Message
+                    </button>
+                </form>
+
             </section>
 
             <footer id="footer">
@@ -139,28 +142,15 @@
                         <path d="M0 0 L50 100 L100 0 Z" fill="rgb(45, 45, 45)" stroke="rgb(45, 45, 45)"></path>
                     </svg>
                     <div id="contact-gradient-transition"></div>
-                    <h1>
-                        CONTACT
-                    </h1>
+                    <h2>
+                        "Premature optimization is the root of all evil" - Donald Knuth
+                    </h2>
     
                     <div class="center" id="header-underline-wrapper">
                         <div id="header-underline"></div>
-                    </div>
-    
-                    <div class="center">
-                        <p>
-                            Do you have a question or want to work with me?
-                        </p>
-                    </div>
-    
-                    <!-- Using inline css because it's only one property -->
-                    <form action="contant%20me.html" method="get" class="center" style="padding-bottom: 4vh;">
-                        <button class="button">
-                            Contact Me!
-                        </button>
-                    </form>
-                    
+                    </div>                    
                 </section>
+
                 <div class="center">
                     <a href="https://github.com/Matistjati" id="github-logo">
                         <img src="img/github%20logo.png" alt="The github logo">
@@ -176,6 +166,8 @@
             </footer>
         </div>
 
+        <script src="js/map.js"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDn9HuEAA4zIh-IAbpwaiw4TrM9k-CnlUk&map_ids=d2c1191baf1f9a73&callback=InitMap"></script>
         <script src="js/w3codecolor.js"></script>
         <script src="js/main.js"></script>
     </body>

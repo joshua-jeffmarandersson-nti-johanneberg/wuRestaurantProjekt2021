@@ -17,7 +17,8 @@ body
 }
 
 
-img {
+img
+{
     width: 100%;
     height: 100%;
     object-position: center;
@@ -60,7 +61,7 @@ img {
     margin-bottom: 3%;
 }
 
-input
+.burger-menu input
 {
     position: fixed;
     opacity: 0;
@@ -136,6 +137,15 @@ input
     column-gap: 0.7vw;
     padding: 2%;
     padding-bottom: 5vh;
+}
+
+.contact-me .grid-wrapper
+{
+    grid-template-areas: 
+        "tx"
+        "co"
+        "mp"
+        "mp";
 }
 
 #about-me
@@ -226,6 +236,17 @@ input
     margin-bottom: 1%;
 }
 
+#contact-me h2
+{
+    text-align: center;
+    font-size: 20pt;
+}
+
+.contact-me #header-underline-wrapper
+{
+    padding-bottom: 1%;
+}
+
 #contact-gradient-transition
 {
     position: absolute;
@@ -234,6 +255,131 @@ input
     top: 0;
     background: linear-gradient(rgba(45,45,45, 1), rgba(69,69,69, 0));
 }
+
+#map-container
+{
+    grid-area: mp;
+    position: relative;
+}
+
+#map
+{
+    width: 100%;
+    height: 100%;
+    grid-area: mp;
+}
+
+#map-overlay
+{
+    position: absolute;
+    top: 40px;
+    left: 40px;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+#map-overlay span
+{
+    margin: 10px;
+    color: rgb(25, 230, 209);
+    margin-right: 0;    
+}
+
+#map-overlay p
+{
+    margin: 10px;
+}
+
+
+#contact-info
+{
+    grid-area: tx;
+}
+
+#contact-info h1
+{
+    font-size: 25pt;
+}
+
+.contact-form
+{
+    grid-area: co;
+    width: 80%;
+    height: 440px;
+    background: rgb(69, 69, 69);
+    border-radius: 8px;
+    box-shadow: 0 0 40px -10px #000;
+    transform: translateX(10%);
+    padding: 20px 30px;
+    max-width: calc(100vw - 40px);
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+    position: relative;
+}
+
+.contact-form h2
+{
+    margin: 10px 0;
+    padding-bottom: 10px;
+    width: 40%;
+    border-bottom: 3px solid white;
+}
+
+.contact-form input
+{
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    background: none;
+    outline: none;
+    resize: none;
+    border: 0;
+    transition: all 0.3s;
+    color: white;
+    border-bottom: 2px solid #bebed2;
+}
+
+.contact-form ::placeholder
+{
+    color: white;
+    font-family: "Segoe UI";
+}
+
+.contact-form input:focus
+{
+    border-bottom: 2px solid white;
+}
+
+.contact-form p:before
+{
+    content: attr(type);
+    display: block;
+    margin: 28px 0 0;
+    font-size: 14px;
+    color: white;
+}
+
+.contact-form button
+{
+    float: right;
+    padding: 8px 12px;
+    margin: 8px 0 0;
+    border: 2px solid white;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.contact-form button:hover
+{
+    background: rgb(45,45,45);
+}
+
+.contact-form span
+{
+    margin: 0 5px 0 15px;
+}
+  
+
+  
 
 .center
 {
@@ -248,6 +394,7 @@ input
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
+    /* Apparently it's a compatability thing */
     text-fill-color: transparent;
     background-size: 300% 300%;
 }
@@ -258,6 +405,7 @@ input
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
+    /* Apparently it's a compatability thing */
     text-fill-color: transparent;
     background-size: 600% 600%;
     animation: AnimationName 12.5s ease infinite;
@@ -427,6 +575,8 @@ label:hover .burger
     background: rgb(107,255,214);
     background: linear-gradient(103deg, rgba(107,255,214,1) 8%, rgba(242,118,255,1) 100%);
 }
+
+
 
 @media (min-width: 40em)
 {
@@ -605,6 +755,8 @@ article
 
 
 
+
+
 /* Desktop, > 768 px */
 @media only screen and (min-width: 48em)
 {
@@ -621,6 +773,11 @@ article
     #contact-me h1
     {
         padding-top: 0;
+    }
+
+    #contact-me form
+    {
+        padding-bottom: 4vh;
     }
 
     #video-player-phone
@@ -652,6 +809,13 @@ article
         grid-template-areas: 
             "a1 a2"
             "a4 a3";
+    }
+
+    .contact-me .grid-wrapper
+    {
+        grid-template-areas: 
+            "tx mp"
+            "co mp";
     }
 
     #radar-container
@@ -794,8 +958,15 @@ article
     }
 }
 
+/* > 960 px */
 @media only screen and (min-width: 60em)
 {
+    .contact-form
+    {
+        transform: translateX(40%);
+        width: 60%;
+    }
+
     .nav-links
     {
         width: 80%;
@@ -812,6 +983,8 @@ article
     }
 }
 
+
+/* > 1280 px */
 @media only screen and (min-width: 80em)
 {
     .nav-links
@@ -859,3 +1032,4 @@ article
         transform: skewX(15deg) translateX(-110px);
     }
 }
+
