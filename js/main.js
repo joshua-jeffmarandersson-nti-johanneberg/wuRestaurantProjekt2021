@@ -7,13 +7,14 @@ function SubmitForm()
     var link = "mailto:matistjati@outlook.com?"
              + "subject=" + encodeURIComponent(subject)
              + "&body=" + encodeURIComponent("From: " + name + ".\n" + body);
-    ;
 
     console.log(link);
 
     window.location.href = link;
 }
 
-button = document.querySelector(".contact-form button");
-
-button.addEventListener("click", SubmitForm)
+let button = document.querySelector(".contact-form button");
+if (button != null)
+{
+    button.addEventListener("click", SubmitForm);
+}
