@@ -524,24 +524,33 @@ img
     width: 100%;
     padding: 2em;
     
-    background: linear-gradient(270deg, rgba(107,221,230,1)  0%, rgba(242,118,255,1) 100%);
+    
+    background: rgb(69, 69, 69);
+    /* Colorblind torture mode */
+    /* background: linear-gradient(270deg, rgba(107,221,230,1)  0%, rgba(242,118,255,1) 100%); */
     color: #fff;
     border-radius: 1em;
 }
 
 .my-projects #timeline-stack #timeline ul :nth-child(2) .container
 {    
-    background: linear-gradient(90deg, rgba(107,221,230,1)  0%, rgba(242,118,255,1) 100%);
+    background: rgb(69, 69, 69);
+    /* Colorblind torture mode */
+    /* background: linear-gradient(90deg, rgba(107,221,230,1)  0%, rgba(242,118,255,1) 100%); */
 }
 
 .my-projects #timeline-stack #timeline ul :nth-child(3) .container
 {    
-    background: linear-gradient(270deg, rgba(107,221,230,1)  0%, rgba(242,118,255,1) 100%);
+    background: rgb(69, 69, 69);
+    /* Colorblind torture mode */
+    /* background: linear-gradient(270deg, rgba(107,221,230,1)  0%, rgba(242,118,255,1) 100%); */
 }
 
 .my-projects #timeline-stack #timeline ul :nth-child(4) .container
 {    
-    background: linear-gradient(90deg, rgba(107,221,230,1)  0%, rgba(242,118,255,1) 100%);
+    background: rgb(69, 69, 69);
+    /* Colorblind torture mode */
+    /* background: linear-gradient(270deg, rgba(107,221,230,1)  0%, rgba(242,118,255,1) 100%); */
 }
 
 .my-projects #timeline-stack #timeline ul
